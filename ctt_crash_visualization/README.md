@@ -31,9 +31,9 @@ Combining this information with the crashes located on each segment individually
 ![](https://github.com/thenick775/terbine_visualizations/blob/master/ctt_crash_visualization/graphics/segment_1241.png)
 ![](https://github.com/thenick775/terbine_visualizations/blob/master/ctt_crash_visualization/graphics/segment_1249.png)
 
-Given that this is a fairly small data sample, I think it could be said that on average, when an accident occurred there were large fluctuations in the road speed at the time.
+Given that this is a fairly small data sample, I think it can be said that on average, when an accident occurred there were large fluctuations in the road speed at the time.
 
-Real time data processing can be used to make these correlations as data is available, allowing the City to better address road construction, policing, traffic light timings, and assessment high risk areas on small and large scales dynamically. With this information the government could react in real time to the needs of the people commuting and living in these areas to better address their safety through infrastructure and smart development where it is needed most.
+Real time data processing can be used to make these correlations as data is available, allowing the City of Chicago to better address road construction, policing, traffic light timings, and assessment of high risk areas on small and large scales dynamically. With this information the government could react in real time to the needs of the people commuting and living in these areas to better address their safety through infrastructure and smart development where it is needed most.
 
 
 Data Sources:
