@@ -20,4 +20,8 @@ Fare Card Counts (Continuous data): terbine.io, feed: Fare Card Counts / New Yor
 
 technologies used:
 
+javascript 
+
 d3.js
+
+jupyter-notebook
