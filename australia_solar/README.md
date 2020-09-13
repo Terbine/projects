@@ -1,3 +1,4 @@
+#####  Written By: Nicholas VanCise
 ![](https://github.com/thenick775/terbine_visualizations/blob/master/australia_solar/graphics/demo.png)
 
 This interactive choropleth map describes the estimates of actual regional rooftop solar generation in Australia, with a granularity of half an hour.
