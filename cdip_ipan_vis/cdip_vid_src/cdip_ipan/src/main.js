@@ -33,7 +33,7 @@ d3.json("http://localhost:8768/data/cdipres.json", function(datajson) {
         d3.select("#chart-radar").append("div")
         .attr("dy", ".35em")
         .attr("text-anchor", "middle")
-        .html("CDIP Station Breakdown: Ipan, Guam" + "<br/><br/>" + "Definitions:<br/>SST: Sea Surface Temperature (Deg. F)<br/>DP: Peak Direction (Deg.)<br/>Hs:Significant Wave Height (ft)<br/>TP:Peak Period (Sec)<br/>TA: Average Period (Sec)")
+        .html("CDIP Station Breakdown: Ipan, Guam" + "<br/><br/>" + "Definitions:<br/>SST: Sea Surface Temperature (Deg. F)<br/>DP: Peak Direction (Deg.)<br/>HS:Significant Wave Height (ft)<br/>TP:Peak Period (Sec)<br/>TA: Average Period (Sec)")
         .attr("class", "cdiplabel");
 
 
