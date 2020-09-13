@@ -8,6 +8,7 @@ var size = 2;
 var thecount = 0;
 var delay = 350;
 var play = false;
+var scaled=true;
 
 
 d3.json("http://localhost:8768/data/cdipres.json", function(datajson) {
@@ -24,7 +25,21 @@ d3.json("http://localhost:8768/data/cdipres.json", function(datajson) {
         });
     });
 
+    console.log(datajson)
+
+var mvalues = [];
+
+datajson.forEach(function (w) {
+    w.data.forEach(function (nestedItem) {
+        mvalues.push(nestedItem.value);
+    });
+});
+
+
+console.log("Min:" + Math.min.apply(Math, mvalues)); // Min:0
+console.log("Max:" + Math.max.apply(Math, mvalues)); // Max:194
     //console.log(datajson)
+var mmax=Math.max.apply(Math, mvalues)
 
     function drawRadarCharts() {
         drawRadarChart('#chart-radar', wMaior, wMaior, json);
@@ -84,7 +99,7 @@ d3.json("http://localhost:8768/data/cdipres.json", function(datajson) {
 
                 cfg.maxValue = Math.max(cfg.maxValue, d3.max(data, function(i) {
                     return d3.max(i.map(function(o) {
-                        return o.value;
+                        return scaled ? o.value : mmax*0.7;
                     }));
                 }));
                 var allAxis = (data[0].map(function(i, j) {
@@ -423,12 +438,21 @@ d3.json("http://localhost:8768/data/cdipres.json", function(datajson) {
 
     drawRadarCharts();
 
-    d3.select("button").on("click", function pause() {
+    d3.select(".pause").on("click", function pause() {
         play = !play
         if (play){ 
             d3.select(this).text("Pause")
         }else{
             d3.select(this).text("Play")
+        }
+    });
+
+    d3.select(".scale").on("click", function pause() {
+        scaled = !scaled
+        if (scaled){ 
+            d3.select(this).text("Scale Abs")
+        }else{
+            d3.select(this).text("Scale Rel")
         }
     });
 
