@@ -1,3 +1,5 @@
+#####  Written By: Nicholas VanCise
+
 ![](https://github.com/thenick775/terbine_visualizations/blob/master/nrel_unlv_visualization/graphics/demo.png)
 
 [Try it live!](https://raw.githack.com/thenick775/terbine_visualizations/livepreview/nrel_unlv_visualization/src/nrel_unlv_vis/src/dashboard.html)
