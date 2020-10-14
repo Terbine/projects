@@ -68,7 +68,7 @@ function Charts() {
             .range([chartheight - (chartmargin * 2), 0]);
 
         xAxis = d3.axisBottom(xScale)
-            .ticks(d3.utcMinute.every(120))
+            .ticks(d3.utcHour.every(1))
             .tickFormat(d3.utcFormat("%Y/%m/%d %H:%M:%S"));
 
         yAxis = d3.axisRight(yScale)
@@ -224,11 +224,11 @@ function Charts() {
             } else if (chtimeron) {
                 clearTimeout(charttimer);
                 chtimeron = false
-                chbuttontext.text("Play").attr("x", 35)
+                chbuttontext.text("Play").attr("x", box.width/2-50)
                 chartplaying = false;
             } else {
                 chtimeron = true
-                chbuttontext.text("Pause").attr("x", 30)
+                chbuttontext.text("Pause").attr("x", box.width/2-55)
                 chartupdate();
                 chartplaying = true;
                 stop_globe_rotation()
@@ -243,7 +243,7 @@ function Charts() {
             .attr("fill", "#FFF")
             .attr("stroke", "#000")
             .attr("stroke-width", "0.2")
-            .attr("x", 25)
+            .attr("x", box.width/2-60)
             .attr("y", box.height / 2 + 105)
             .attr("width", 50)
             .attr("height", 30)
@@ -253,7 +253,7 @@ function Charts() {
 
         chbuttontext = chartsdivtes.append("text")
             .text("Play")
-            .attr("x", 35)
+            .attr("x", box.width/2-50)
             .attr("y", box.height / 2 + 125)
             .on("click", chbuttonclickfunc)
             .on("mousedown", chbutmousedown);
@@ -261,7 +261,7 @@ function Charts() {
         dropdown = chartsdivtes.append("foreignObject") //for dynamically setting the animation speed
             .attr("width", 60)
             .attr("height", 40)
-            .attr("x", 100)
+            .attr("x", box.width/2+10)
             .attr("y", box.height * 7.5 / 12 + 18)
             .append("xhtml:select")
             .style("width", "50px")

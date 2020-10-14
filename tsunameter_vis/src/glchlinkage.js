@@ -68,7 +68,7 @@ function resetchart(newstat) {
         console.log("resetting chart new file:", newstat)
         clearTimeout(charttimer);
         chtimeron = false
-        chbuttontext.text("Play").attr("x", 35)
+        chbuttontext.text("Play").attr("x", 700/2-50)
         chartplaying = false;
         indexcount = 0;
         time = tsudata[0]["time (unix)"]
@@ -89,8 +89,8 @@ function resetchart(newstat) {
 
         yAxis = d3.axisRight(yScale)
             .ticks(4).tickFormat(function(d){
-                                                   return d+' m';
-                                                 });;
+                                    return d+' m';
+                                });
 
         chartsdivtes.selectAll('.line_').remove();
 
