@@ -19,7 +19,6 @@ function Globe() {
         .translate([box.width / 2, box.height / 2])
         .clipAngle(90);
 
-
     const initscale = projection.scale()
     let path = d3.geoPath().projection(projection)
 

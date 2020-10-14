@@ -100,7 +100,9 @@ function resetchart(newstat) {
         chartsdivtes.append('g')
             .attr('transform', 'translate(' + (chartwidth - chartmargin * 2.5) + ',' + chartmargin + ')')
             .classed('y axis', true)
-            .call(yAxis);
+            .call(yAxis)
+            .selectAll("text")
+            .style("font-size","12");
 
         chartsdivtes.append('g')
             .attr('transform', 'translate(-12,' + (chartheight - chartmargin) + ')')

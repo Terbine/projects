@@ -72,14 +72,16 @@ function Charts() {
             .tickFormat(d3.utcFormat("%Y/%m/%d %H:%M:%S"));
 
         yAxis = d3.axisRight(yScale)
-            .ticks(4).tickFormat(function(d){
-                                                   return d+' m';
-                                                 });
+            .ticks(4).tickFormat(function(d) {
+                return d + ' m';
+            });
 
         chartsdivtes.append('g')
             .attr('transform', 'translate(' + (chartwidth - chartmargin * 2.5) + ',' + chartmargin + ')')
             .classed('y axis', true)
-            .call(yAxis);
+            .call(yAxis)
+            .selectAll("text")
+            .style("font-size", "12");
 
         chartsdivtes.append('g')
             .attr('transform', 'translate(0,' + (chartheight - chartmargin) + ')')
@@ -110,7 +112,7 @@ function Charts() {
 
             customdur = duration;
             if (delta != 0 && delta > 900000) { //15 minute interval is my gauge
-                customdur = duration * (((delta) / 900000)+1) //why? dont quite understand yet but the +1 appears to fix transition problems
+                customdur = duration * (((delta) / 900000) + 1) //why? dont quite understand yet but the +1 appears to fix transition problems
             } else if (delta != 0 && delta < 900000) {
                 customdur = duration / delta
             }
@@ -209,6 +211,7 @@ function Charts() {
 
             chartsdivtes.selectAll('.x.axis').selectAll("text")
                 .style("text-anchor", "end")
+                .style("font-size", "12")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
                 .attr("transform", "rotate(-65)")
@@ -241,7 +244,7 @@ function Charts() {
             .attr("stroke", "#000")
             .attr("stroke-width", "0.2")
             .attr("x", 25)
-            .attr("y", box.height / 2 + 90)
+            .attr("y", box.height / 2 + 105)
             .attr("width", 50)
             .attr("height", 30)
             .attr("r", 20)
@@ -251,7 +254,7 @@ function Charts() {
         chbuttontext = chartsdivtes.append("text")
             .text("Play")
             .attr("x", 35)
-            .attr("y", box.height / 2 + 110)
+            .attr("y", box.height / 2 + 125)
             .on("click", chbuttonclickfunc)
             .on("mousedown", chbutmousedown);
 
@@ -259,7 +262,7 @@ function Charts() {
             .attr("width", 60)
             .attr("height", 40)
             .attr("x", 100)
-            .attr("y", box.height * 7.5 / 12 + 2)
+            .attr("y", box.height * 7.5 / 12 + 18)
             .append("xhtml:select")
             .style("width", "50px")
             .style("height", "30px")
@@ -322,8 +325,7 @@ function Charts() {
         var table = chartsdivtes.append("foreignObject")
             .attr("width", box.width)
             .attr("height", 160)
-            //.attr("x", 10)
-            .attr("y", box.height * 8.5 / 12)
+            .attr("y", box.height * 8.5 / 12 + 10)
             .append("xhtml:table")
             .style("border-collapse", "collapse")
             .style("border", "2px black solid")
