@@ -3,6 +3,8 @@
 
 ![](https://github.com/thenick775/terbine_visualizations/blob/master/tsunameter_vis/graphics/demo2.png)
 
+[Try it live!](https://raw.githack.com/thenick775/terbine_visualizations/livepreview/tsunameter_vis/src/index.html)
+
 How to operate:
 
 -To select a station, drag and zoom the globe to view the station you wish to examine, and then click the station marker
