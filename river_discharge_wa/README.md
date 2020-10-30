@@ -3,6 +3,8 @@
 
 ![](https://github.com/Terbine/projects/blob/master/river_discharge_wa/graphics/demo.png)
 
+[Try the visualization live!](https://raw.githack.com/thenick775/terbine_visualizations/master/river_discharge_wa/src/line.html)
+
 How to operate:
 -Use the mouse click, drag, and scroll to manipulate the data visible, or drag the date slider
 
