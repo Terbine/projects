@@ -6,6 +6,7 @@
 [Try the visualization live!](https://raw.githack.com/thenick775/terbine_visualizations/master/river_discharge_wa/src/line.html)
 
 How to operate:
+
 -Use the mouse click, drag, and scroll to manipulate the data visible, or drag the date slider
 
 -Use the time slider or mouse scroll to zoom the chart
